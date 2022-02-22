@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>class 19</title>
+  </head>
+  <body>
+
+    <!-- Developers data -->
+
+<div class="deves">
+    <a class="btn btn-primary" data-bs-toggle="modal" href="#deves-add">Add New Deves</a>
+    <hr>
+<div class="card">
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+             <tr>
+                 <th>#</th>
+                 <th>Name</th>
+                 <th>Age</th>
+                 <th>Email</th>
+                 <th>Location</th>
+                 <th>Skill</th>
+                 <th>Photo</th>
+             </tr>
+            </thead>
+            <tbody id="deves-data-list">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+<!-- Deves modal -->
+
+<div class="modal fade" id="deves-add">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-titel">Add Developers</h2>
+            </div>
+            <div class="modal-body">
+                <form action="" id="deves-add-form">
+                    <div class="form-group mb-2">
+                        <label for="">Name</label>
+                        <input id="name" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Age</label>
+                        <input id="age" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Email</label>
+                        <input id="email" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Location</label>
+                        <input id="location" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Skill</label>
+                        <select class="form-control" name="" id="deves-skill">
+                           <option value="">-select-</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Photo</label>
+                        <input id="photo" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <input class="btn btn bg-success w-100" data-bs-dismiss="modal" type="submit" value="Add developers">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="mess"></div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+<!-- Modal view -->
+
+<div class="modal fade" id="modal-view">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header"></div>
+            <div class="modal-body">
+                <h2>View developers data</h2>
+                <hr>
+                <form action="" id="deves-view-form">
+                    <div class="form-group mb-2">
+                        <label for="">Name</label>
+                        <input id="view-name" class="form-control" type="text">
+                    </div>
+                
+                    <div class="form-group mb-2">
+                        <label for="">Age</label>
+                        <input id="view-age" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Email</label>
+                        <input id="view-email" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Location</label>
+                        <input id="view-location" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Skill</label>
+                         <input class="form-control" name="" id="view-deves-skill">
+                        </div>
+                    <div class="form-group mb-2">
+                        <label for="">Photo</label>
+                        <img class="w-100" id="view-preview" src="" alt="">
+                        <input id="view-photo" class="form-control" type="text">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal edite -->
+
+<div class="modal fade" id="modal-edite">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2>Edite developers data</h2>
+                <hr>
+                <form action="" id="deves-edite-form">
+                    <div class="form-group mb-2">
+                        <label for="">Name</label>
+                        <input id="edite-name" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        
+                        <input id="edite-id" class="form-control" type="hidden">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Age</label>
+                        <input id="edite-age" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Email</label>
+                        <input id="edite-email" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Location</label>
+                        <input id="edite-location" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Skill</label>
+                         <input class="form-control" name="" id="edite-deves-skill">
+                        </div>
+                    <div class="form-group mb-2">
+                        <label for="">Photo</label>
+                        <img class="w-100" id="preview" src="" alt="">
+                        <input id="edite-photo" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <input class="btn btn bg-success w-100" data-bs-dismiss="modal" type="submit" value="Edite developers">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal delete -->
+
+<div class="modal fade" id="modal-delete">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header"></div>
+            <div class="modal-body">
+                <h2>Delete developers data</h2>
+                <hr>
+                <form action="" id="deves-delete-form">
+                    <div class="form-group mb-2">
+                        <label for="">Name</label>
+                        <input id="delete-name" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        
+                        <input id="delete-id" class="form-control" type="hidden">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Age</label>
+                        <input id="delete-age" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Email</label>
+                        <input id="delete-email" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Location</label>
+                        <input id="delete-location" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Skill</label>
+                         <input class="form-control" name="" id="delete-deves-skill">
+                        </div>
+                    <div class="form-group mb-2">
+                        <label for="">Photo</label>
+                        <img class="w-100" id="delete-preview" src="" alt="">
+                        <input id="delete-photo" class="form-control" type="text">
+                    </div>
+                    <div class="form-group mb-2">
+                        <input class="btn btn bg-success w-100" data-bs-dismiss="modal" type="submit" value="Delete developers">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
+
+<script src="./app.js"></script>
+  </body>
+</html>
